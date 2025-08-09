@@ -1,0 +1,15 @@
+analyzer:
+  exclude:
+    - build/**
+    - .dart_tool/**
+  language:
+    strict-casts: false
+    strict-inference: false
+    strict-raw-types: false
+
+linter:
+  rules:
+    - prefer_const_constructors
+    - prefer_final_fields
+    - always_declare_return_types
+    - avoid_print
