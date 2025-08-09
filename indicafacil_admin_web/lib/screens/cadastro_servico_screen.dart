@@ -142,7 +142,7 @@ class _CadastroServicoScreenState extends State<CadastroServicoScreen> {
                   decoration: const InputDecoration(labelText: 'Nome*', border: OutlineInputBorder()),
                   validator: (v) {
                     if (v == null || v.trim().isEmpty) return 'Obrigatório';
-                    if (!RegExp(r'^[A-Za-zÀ-ÿ\s]+\$?').hasMatch(v.trim())) return 'Apenas letras';
+                    if (!RegExp(r'^[A-Za-zÀ-ÿ\s]+$').hasMatch(v.trim())) return 'Apenas letras';
                     return null;
                   },
                 ),
@@ -155,8 +155,7 @@ class _CadastroServicoScreenState extends State<CadastroServicoScreen> {
                   keyboardType: TextInputType.number,
                   validator: (v) {
                     if (v == null || v.trim().isEmpty) return 'Obrigatório';
-                    if (!RegExp(r'^\d+
-$').hasMatch(v.trim())) return 'Apenas números';
+                    if (!RegExp(r'^\d+$').hasMatch(v.trim())) return 'Apenas números';
                     return null;
                   },
                 ),
@@ -275,7 +274,7 @@ $').hasMatch(v.trim())) return 'Apenas números';
                   decoration: const InputDecoration(labelText: 'Local de Execução*', border: OutlineInputBorder()),
                   validator: (v) {
                     if (v == null || v.trim().isEmpty) return 'Obrigatório';
-                    if (!RegExp(r'^[A-Za-zÀ-ÿ\s]+\$?').hasMatch(v.trim())) return 'Apenas letras';
+                    if (!RegExp(r'^[A-Za-zÀ-ÿ\s]+$').hasMatch(v.trim())) return 'Apenas letras';
                     return null;
                   },
                 ),
