@@ -94,7 +94,7 @@ class _ClientesScreenState extends State<ClientesScreen> {
                           decoration: const InputDecoration(labelText: 'Nome', border: OutlineInputBorder()),
                           validator: (v) {
                             if (v == null || v.trim().isEmpty) return 'Obrigatório';
-                            if (!RegExp(r'^[A-Za-zÀ-ÿ\s]+\$?').hasMatch(v.trim())) {
+                            if (!RegExp(r'^[A-Za-zÀ-ÿ\s]+$').hasMatch(v.trim())) {
                               return 'Apenas letras';
                             }
                             return null;
@@ -134,8 +134,7 @@ class _ClientesScreenState extends State<ClientesScreen> {
                           decoration: const InputDecoration(labelText: 'UF', counterText: '', border: OutlineInputBorder()),
                           validator: (v) {
                             if (v == null || v.isEmpty) return null; // optional
-                            if (!RegExp(r'^[A-Za-z]{2}
-$').hasMatch(v)) return '2 letras';
+                            if (!RegExp(r'^[A-Za-z]{2}$').hasMatch(v)) return '2 letras';
                             return null;
                             return null;
                           },
